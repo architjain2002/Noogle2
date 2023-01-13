@@ -64,12 +64,6 @@ function activate(context) {
 
             let str = stderr.substring(ind, stderr.length - 1);
             const array = str.split("\n");
-            fs.writeFileSync(
-              "D:\\Vinnhack\\cody\\errorFiles\\file.txt",
-              temp + array[0],
-              "utf8"
-            );
-
             handle(temp, array[0]);
 			
 
