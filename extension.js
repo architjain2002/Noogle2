@@ -1,13 +1,13 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
-const vscode=require('vscode');
-const {exec}=require('child_process');
-const path=require('path');
-const axios=require('axios');
-const fs =require('fs');
-const fetch=require('node-fetch');
-const cheerio = require('cheerio');
-const https = require('https');
+const vscode = require("vscode");
+const { exec } = require("child_process");
+const path = require("path");
+const axios = require("axios");
+const fs = require("fs");
+const fetch = require("node-fetch");
+const cheerio = require("cheerio");
+const https = require("https");
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 
@@ -26,51 +26,55 @@ function activate(context) {
     function () {
       // The code you place here will be executed every time your command is executed
       const editor = vscode.window.activeTextEditor;
-     
+
       let filename;
       if (editor) {
         let document = editor.document;
         filename = document.fileName;
-		let extension=path.basename(filename).split(".")[1];
-		let command="",temp="";
-		switch (extension){
-			case "cpp":
-				temp="In Cpp ";
-				command=`g++ ${filename}`;
-				break;
-			case "java":
-				temp="In Java ";
-				command=`java ${filename}`;
-				break;
-			case "py":
-				temp="In python ";
-				command=`python ${filename}`;
-				break;
-			case "c":
-				temp="In C ";
-				command=`gcc ${filename}`;
-				break;
-			case "js":
-				temp="In javascript ";
-				command=`node ${filename}`;
-				break;
-			default:
-				break;
-		}
+        let extension = path.basename(filename).split(".")[1];
+        let command = "",
+          temp = "";
+        switch (extension) {
+          case "cpp":
+            temp = "c++";
+            command = `g++ ${filename}`;
+            break;
+          case "java":
+            temp = "java ";
+            command = `java ${filename}`;
+            break;
+          case "py":
+            temp = "python ";
+            command = `python ${filename}`;
+            break;
+          case "c":
+            temp = "c ";
+            command = `gcc ${filename}`;
+            break;
+          case "js":
+            temp = "javascript ";
+            command = `node ${filename}`;
+            break;
+          default:
+            break;
+        }
         exec(command, (error, stdout, stderr) => {
           if (stderr) {
-			let ind=stderr.search(/(e|E)rror/);
-			
-			let str=stderr.substring(ind,stderr.length-1);
-			const array=str.split("\n")
+            let ind = stderr.search(/(e|E)rror/);
+
+            let str = stderr.substring(ind, stderr.length - 1);
+            const array = str.split("\n");
             fs.writeFileSync(
               "D:\\Vinnhack\\cody\\errorFiles\\file.txt",
-              temp+array[0],
+              temp + array[0],
               "utf8"
             );
-				
-			handle(temp,array[0]);
-			
+
+            handle(temp, array[0]).then((listOfData)=>(console.log(listOfData)));
+			// for(let i=0;i<listOfData.length;i++){
+			// 	let particular=JSON.parse(str[i]);
+			// 	console.log(particular.link);
+
           }
         });
         // Display a message box to the user
@@ -82,27 +86,29 @@ function activate(context) {
   context.subscriptions.push(disposable);
 }
 
-
-
-
 // This method is called when your extension is deactivated
 function deactivate() {}
 
+async function handle(a, b) {
+  const httpsAgent = new https.Agent({ keepAlive: true });
+  const search = a + b;
+  //@ts-ignore
+  axios.get(
+      `https://www.googleapis.com/customsearch/v1?key=AIzaSyCw4zRgo8f0ZL1902rHQ4plGf3nSd4XgN8&cx=2105e3b7edca745ba&q=${search}`)
+    .then((res) => {
+      const str=res.data.items;
+	//   for(let i=0;i<str.length;i++){
+	// 	console.log(str[i].link);
 
-function handle(a,b){
-	function fetch_demo(){
-		const search=a+b;
-		fetch_demo2(search);
-	}
-	async function fetch_demo2(search){
-		const httpsAgent = new https.Agent({ keepAlive: true });
-		axios.get(`https://www.googleapis.com/customsearch/v1?key=AIzaSyC6gKMMoXgPkOnnC1TTj6C60aeLxI1v_ys&cx=32c6f4cdb22f343b0&q=${search}`, {
-        
-    }).then((res)=>{
-        console.log(res.data);
-    }).catch(err=>console.error(err));
-	}
-	fetch_demo();
+	//   }
+	  fs.writeFileSync(
+		"D:\\Vinnhack\\cody\\errorFiles\\file2.txt",
+		str,
+		"utf8"
+	  );
+	  return str;
+    })
+    .catch((err) => console.error(err));
 }
 module.exports = {
   activate,

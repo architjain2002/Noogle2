@@ -759,444 +759,6 @@
   },
   {
     "kind": "customsearch#result",
-    "title": "error: 'slots_reference' was not declared in this scope · Issue #387 ...",
-    "htmlTitle": "<b>error</b>: &#39;slots_reference&#39; was <b>not declared in this scope</b> · Issue #387 ...",
-    "link": "https://github.com/UZ-SLAMLab/ORB_SLAM3/issues/387",
-    "displayLink": "github.com",
-    "snippet": "Sep 19, 2021 ... home/rohan/Pangolin/components/pango_core/include/sigslot/signal.hpp:1180:65: error: 'slots_reference' was not declared in this scope 1180 ...",
-    "htmlSnippet": "Sep 19, 2021 <b>...</b> home/rohan/Pangolin/components/pango_core/include/sigslot/signal.hpp:1180:65: <b>error</b>: &#39;slots_reference&#39; was <b>not declared in this scope</b> 1180&nbsp;...",
-    "cacheId": "2XU14n2Duq4J",
-    "formattedUrl": "https://github.com/UZ-SLAMLab/ORB_SLAM3/issues/387",
-    "htmlFormattedUrl": "https://github.com/UZ-SLAMLab/ORB_SLAM3/issues/387",
-    "pagemap": {
-      "cse_thumbnail": [
-        {
-          "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHpsLx48Noy3QAwdr5gg0DPqtN9ZCilWho6uaj64RVchhwEOc72WjascQ",
-          "width": "318",
-          "height": "159"
-        }
-      ],
-      "softwaresourcecode": [
-        {
-          "author": "UZ-SLAMLab",
-          "name": "ORB_SLAM3"
-        }
-      ],
-      "metatags": [
-        {
-          "octolytics-url": "https://collector.github.com/github/collect",
-          "apple-itunes-app": "app-id=1477376905",
-          "og:image": "https://opengraph.githubassets.com/7fab415b12afca6f7050499ebd85826b5d2307749b6b92bad242308e86597b2e/UZ-SLAMLab/ORB_SLAM3/issues/387",
-          "twitter:card": "summary_large_image",
-          "og:image:width": "1200",
-          "theme-color": "#1e2327",
-          "og:site_name": "GitHub",
-          "hovercard-subject-tag": "issue:1000625025",
-          "turbo-body-classes": "logged-out env-production page-responsive",
-          "html-safe-nonce": "458b6c644b5aaacae73aa2bc301e787f723fda23ca02243820c981397d611d33",
-          "expected-hostname": "github.com",
-          "og:description": "/home/rohan/Pangolin/components/pango_core/include/sigslot/signal.hpp:1180:65: error: ‘slots_reference’ was not declared in this scope 1180 | cow_copy_type&lt;list_type, Lockable&gt; ref = slots_re...",
-          "browser-errors-url": "https://api.github.com/_private/browser/errors",
-          "octolytics-dimension-user_login": "UZ-SLAMLab",
-          "hostname": "github.com",
-          "twitter:site": "@github",
-          "browser-stats-url": "https://api.github.com/_private/browser/stats",
-          "visitor-payload": "eyJyZWZlcnJlciI6IiIsInJlcXVlc3RfaWQiOiJDNUYzOjY2OEM6MzQ0QTVEQTo0Q0Y1ODY5OjYzQjZFQjEwIiwidmlzaXRvcl9pZCI6IjQ1NDI2NTQxNzQ2ODc4NDkyMzIiLCJyZWdpb25fZWRnZSI6ImlhZCIsInJlZ2lvbl9yZW5kZXIiOiJpYWQifQ==",
-          "github-keyboard-shortcuts": "repository,issues",
-          "octolytics-dimension-repository_id": "280608729",
-          "octolytics-dimension-repository_network_root_nwo": "UZ-SLAMLab/ORB_SLAM3",
-          "enabled-features": "TURBO_EXPERIMENT_RISKY,IMAGE_METRIC_TRACKING,GEOJSON_AZURE_MAPS",
-          "twitter:title": "error: ‘slots_reference’ was not declared in this scope · Issue #387 · UZ-SLAMLab/ORB_SLAM3",
-          "og:image:alt": "/home/rohan/Pangolin/components/pango_core/include/sigslot/signal.hpp:1180:65: error: ‘slots_reference’ was not declared in this scope 1180 | cow_copy_type&lt;list_type, Lockable&gt; ref = slots_re...",
-          "og:type": "object",
-          "optimizely-datafile": "{\"groups\": [], \"environmentKey\": \"production\", \"rollouts\": [], \"typedAudiences\": [], \"projectId\": \"16737760170\", \"variables\": [], \"featureFlags\": [], \"experiments\": [], \"version\": \"4\", \"audiences\": [{\"conditions\": \"[\\\"or\\\", {\\\"match\\\": \\\"exact\\\", \\\"name\\\": \\\"$opt_dummy_attribute\\\", \\\"type\\\": \\\"custom_attribute\\\", \\\"value\\\": \\\"$opt_dummy_value\\\"}]\", \"id\": \"$opt_dummy_audience\", \"name\": \"Optimizely-Generated Audience for Backwards Compatibility\"}], \"anonymizeIP\": true, \"sdkKey\": \"WTc6awnGuYDdG98CYRban\", \"attributes\": [{\"id\": \"16822470375\", \"key\": \"user_id\"}, {\"id\": \"17143601254\", \"key\": \"spammy\"}, {\"id\": \"18175660309\", \"key\": \"organization_plan\"}, {\"id\": \"18813001570\", \"key\": \"is_logged_in\"}, {\"id\": \"19073851829\", \"key\": \"geo\"}, {\"id\": \"20175462351\", \"key\": \"requestedCurrency\"}, {\"id\": \"20785470195\", \"key\": \"country_code\"}, {\"id\": \"21656311196\", \"key\": \"opened_downgrade_dialog\"}], \"botFiltering\": false, \"accountId\": \"16737760170\", \"events\": [{\"experimentIds\": [], \"id\": \"17911811441\", \"key\": \"hydro_click.dashboa",
-          "og:title": "error: ‘slots_reference’ was not declared in this scope · Issue #387 · UZ-SLAMLab/ORB_SLAM3",
-          "visitor-hmac": "330e119864b91642479c09ee574ad8618bcd6d267d84232323a8c340e041b1e9",
-          "og:image:height": "600",
-          "turbo-cache-control": "no-preview",
-          "request-id": "C5F3:668C:344A5DA:4CF5869:63B6EB10",
-          "analytics-location": "/<user-name>/<repo-name>/voltron/issues_fragments/issue_layout",
-          "color-scheme": "light dark",
-          "octolytics-dimension-repository_is_fork": "false",
-          "go-import": "github.com/UZ-SLAMLab/ORB_SLAM3 git https://github.com/UZ-SLAMLab/ORB_SLAM3.git",
-          "browser-optimizely-client-errors-url": "https://api.github.com/_private/browser/optimizely_client/errors",
-          "twitter:image:src": "https://opengraph.githubassets.com/7fab415b12afca6f7050499ebd85826b5d2307749b6b92bad242308e86597b2e/UZ-SLAMLab/ORB_SLAM3/issues/387",
-          "octolytics-dimension-user_id": "25055183",
-          "octolytics-dimension-repository_public": "true",
-          "fb:app_id": "1401488693436528",
-          "octolytics-dimension-repository_network_root_id": "280608729",
-          "octolytics-dimension-repository_nwo": "UZ-SLAMLab/ORB_SLAM3",
-          "viewport": "width=device-width",
-          "twitter:description": "/home/rohan/Pangolin/components/pango_core/include/sigslot/signal.hpp:1180:65: error: ‘slots_reference’ was not declared in this scope 1180 | cow_copy_type&amp;lt;list_type, Lockable&amp;gt; ref = ...",
-          "og:author:username": "RG2806",
-          "og:url": "https://github.com/UZ-SLAMLab/ORB_SLAM3/issues/387"
-        }
-      ],
-      "cse_image": [
-        {
-          "src": "https://opengraph.githubassets.com/7fab415b12afca6f7050499ebd85826b5d2307749b6b92bad242308e86597b2e/UZ-SLAMLab/ORB_SLAM3/issues/387"
-        }
-      ]
-    }
-  },
-  {
-    "kind": "customsearch#result",
-    "title": "'DDRD' was not declared in this scope - Microcontrollers - Arduino ...",
-    "htmlTitle": "&#39;DDRD&#39; was <b>not declared in this scope</b> - Microcontrollers - Arduino ...",
-    "link": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969",
-    "displayLink": "forum.arduino.cc",
-    "snippet": "Oct 30, 2021 ... C:\\Users\\lynn\\OneDrive\\Documents\\Arduino\\sketch_oct30a\\sketch_oct30a.ino ... sketch_oct30a:3:1: error: 'DDRD' was not declared in this scope.",
-    "htmlSnippet": "Oct 30, 2021 <b>...</b> <b>C</b>:\\Users\\lynn\\OneDrive\\Documents\\Arduino\\sketch_oct30a\\sketch_oct30a.ino ... sketch_oct30a:3:1: <b>error</b>: &#39;DDRD&#39; was <b>not declared in this scope</b>.",
-    "cacheId": "1v-NaR5wGWAJ",
-    "formattedUrl": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969",
-    "htmlFormattedUrl": "https://forum.arduino.<b>cc</b>/t/ddrd-was-<b>not</b>-<b>declared-in-this-scope</b>/919969",
-    "pagemap": {
-      "cse_thumbnail": [
-        {
-          "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR7MTssePEuEs9fRVEw02x9sG9TZoO43dPgX4Ma-vTv27lgq4udh-pFTQ",
-          "width": "140",
-          "height": "25"
-        }
-      ],
-      "imageobject": [
-        {
-          "url": "https://europe1.discourse-cdn.com/arduino/original/3X/1/f/1f6eb1c9b79d9518d1688c15fe9a4b7cdd5636ae.svg"
-        },
-        {
-          "url": "https://europe1.discourse-cdn.com/arduino/original/3X/1/f/1f6eb1c9b79d9518d1688c15fe9a4b7cdd5636ae.svg"
-        },
-        {
-          "url": "https://europe1.discourse-cdn.com/arduino/original/3X/1/f/1f6eb1c9b79d9518d1688c15fe9a4b7cdd5636ae.svg"
-        },
-        {
-          "url": "https://europe1.discourse-cdn.com/arduino/original/3X/1/f/1f6eb1c9b79d9518d1688c15fe9a4b7cdd5636ae.svg"
-        },
-        {
-          "url": "https://europe1.discourse-cdn.com/arduino/original/3X/1/f/1f6eb1c9b79d9518d1688c15fe9a4b7cdd5636ae.svg"
-        },
-        {
-          "url": "https://europe1.discourse-cdn.com/arduino/original/3X/1/f/1f6eb1c9b79d9518d1688c15fe9a4b7cdd5636ae.svg"
-        },
-        {
-          "url": "https://europe1.discourse-cdn.com/arduino/original/3X/1/f/1f6eb1c9b79d9518d1688c15fe9a4b7cdd5636ae.svg"
-        },
-        {
-          "url": "https://europe1.discourse-cdn.com/arduino/original/3X/1/f/1f6eb1c9b79d9518d1688c15fe9a4b7cdd5636ae.svg"
-        },
-        {
-          "url": "https://europe1.discourse-cdn.com/arduino/original/3X/1/f/1f6eb1c9b79d9518d1688c15fe9a4b7cdd5636ae.svg"
-        },
-        {
-          "url": "https://europe1.discourse-cdn.com/arduino/original/3X/1/f/1f6eb1c9b79d9518d1688c15fe9a4b7cdd5636ae.svg"
-        }
-      ],
-      "person": [
-        {
-          "name": "thecrazyballoon",
-          "url": "thecrazyballoon"
-        },
-        {
-          "name": "Paul_KD7HB",
-          "url": "Paul_KD7HB"
-        },
-        {
-          "name": "jremington",
-          "url": "jremington"
-        },
-        {
-          "name": "thecrazyballoon",
-          "url": "thecrazyballoon"
-        },
-        {
-          "name": "6v6gt",
-          "url": "6v6gt"
-        },
-        {
-          "name": "thecrazyballoon",
-          "url": "thecrazyballoon"
-        },
-        {
-          "name": "thecrazyballoon",
-          "url": "thecrazyballoon"
-        },
-        {
-          "name": "6v6gt",
-          "url": "6v6gt"
-        },
-        {
-          "name": "thecrazyballoon",
-          "url": "thecrazyballoon"
-        },
-        {
-          "name": "system",
-          "url": "system"
-        }
-      ],
-      "organization": [
-        {
-          "name": "Arduino Forum"
-        },
-        {
-          "name": "Arduino Forum"
-        },
-        {
-          "name": "Arduino Forum"
-        },
-        {
-          "name": "Arduino Forum"
-        },
-        {
-          "name": "Arduino Forum"
-        },
-        {
-          "name": "Arduino Forum"
-        },
-        {
-          "name": "Arduino Forum"
-        },
-        {
-          "name": "Arduino Forum"
-        },
-        {
-          "name": "Arduino Forum"
-        },
-        {
-          "name": "Arduino Forum"
-        }
-      ],
-      "interactioncounter": [
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/LikeAction"
-        },
-        {
-          "userinteractioncount": "1",
-          "interactiontype": "http://schema.org/CommentAction"
-        },
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/LikeAction"
-        },
-        {
-          "userinteractioncount": "1",
-          "interactiontype": "http://schema.org/CommentAction"
-        },
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/LikeAction"
-        },
-        {
-          "userinteractioncount": "1",
-          "interactiontype": "http://schema.org/CommentAction"
-        },
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/LikeAction"
-        },
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/CommentAction"
-        },
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/LikeAction"
-        },
-        {
-          "userinteractioncount": "1",
-          "interactiontype": "http://schema.org/CommentAction"
-        },
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/LikeAction"
-        },
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/CommentAction"
-        },
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/LikeAction"
-        },
-        {
-          "userinteractioncount": "1",
-          "interactiontype": "http://schema.org/CommentAction"
-        },
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/LikeAction"
-        },
-        {
-          "userinteractioncount": "1",
-          "interactiontype": "http://schema.org/CommentAction"
-        },
-        {
-          "userinteractioncount": "1",
-          "interactiontype": "http://schema.org/LikeAction"
-        },
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/CommentAction"
-        },
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/LikeAction"
-        },
-        {
-          "userinteractioncount": "0",
-          "interactiontype": "http://schema.org/CommentAction"
-        }
-      ],
-      "metatags": [
-        {
-          "og:image": "https://europe1.discourse-cdn.com/arduino/original/3X/1/f/1f6eb1c9b79d9518d1688c15fe9a4b7cdd5636ae.svg",
-          "theme-color": "#008184",
-          "og:type": "website",
-          "twitter:card": "summary",
-          "twitter:title": "'DDRD' was not declared in this scope",
-          "article:published_time": "2021-10-30T02:31:19+00:00",
-          "og:site_name": "Arduino Forum",
-          "twitter:url": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969",
-          "og:title": "'DDRD' was not declared in this scope",
-          "og:description": "Hey guys, I am using Arduino IDE 1.8.16 with no external libraries nor did I put in any extra libraries yet my simple code gave me an error.  Code:  void setup() {  // put your setup code here, to run once:  DDRD = 0x40;  }  void loop() {  // put your main code here, to run repeatedly:  PORTD = 0x40;  delay(1000);  PORTD = 0x00;  delay(1000);  }  The error message :  Arduino: 1.8.16 (Windows 10), Board: \"NodeMCU-32S, 80MHz, 921600\"  C:\\Users\\lynn\\OneDrive\\Documents\\Arduino\\sketch_oct30a\\sketch_o...",
-          "og:ignore_canonical": "true",
-          "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover",
-          "twitter:description": "Hey guys, I am using Arduino IDE 1.8.16 with no external libraries nor did I put in any extra libraries yet my simple code gave me an error.  Code:  void setup() {  // put your setup code here, to run once:  DDRD = 0x40;  }  void loop() {  // put your main code here, to run repeatedly:  PORTD = 0x40;  delay(1000);  PORTD = 0x00;  delay(1000);  }  The error message :  Arduino: 1.8.16 (Windows 10), Board: \"NodeMCU-32S, 80MHz, 921600\"  C:\\Users\\lynn\\OneDrive\\Documents\\Arduino\\sketch_oct30a\\sketch_o...",
-          "og:url": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969"
-        }
-      ],
-      "discussionforumposting": [
-        {
-          "articlebody": "Hey guys, I am using Arduino IDE 1.8.16 with no external libraries nor did I put in any extra libraries yet my simple code gave me an error. Code: void setup() { // put your setup code here,...",
-          "datemodified": "2021-10-30T02:47:45Z",
-          "position": "#1",
-          "headline": "'DDRD' was not declared in this scope",
-          "datepublished": "2021-10-30T02:31:19Z",
-          "mainentityofpage": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969"
-        },
-        {
-          "articlebody": "You did not say what data type DDRD is. Paul",
-          "datemodified": "2021-10-30T02:34:45Z",
-          "position": "#2",
-          "headline": "'DDRD' was not declared in this scope",
-          "datepublished": "2021-10-30T02:34:45Z",
-          "mainentityofpage": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969"
-        },
-        {
-          "name": "Moved topics disappearing?",
-          "url": "https://forum.arduino.cc/t/moved-topics-disappearing/916891/11"
-        },
-        {
-          "articlebody": "Which Arduino do you have? There may be no port D. Edit: NodeMCU is not an Arduino, so Arduino direct port access macros cannot be used.",
-          "datemodified": "2021-10-30T02:41:37Z",
-          "position": "#3",
-          "headline": "'DDRD' was not declared in this scope",
-          "datepublished": "2021-10-30T02:41:37Z",
-          "mainentityofpage": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969"
-        },
-        {
-          "articlebody": "Hi, I am trying to do port manipulation and it does not seem like I need to give DDRD a data type. I could be wrong",
-          "datemodified": "2021-10-30T02:46:50Z",
-          "position": "#4",
-          "headline": "'DDRD' was not declared in this scope",
-          "datepublished": "2021-10-30T02:46:50Z",
-          "mainentityofpage": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969"
-        },
-        {
-          "articlebody": "thecrazyballoon: Arduino: 1.8.16 (Windows 10), Board: \"NodeMCU-32S, 80MHz, 921600\" You are attempting to use low level access to registers appropriate for the AVR architecture (Arduino Uno...",
-          "datemodified": "2021-10-30T05:52:10Z",
-          "position": "#5",
-          "headline": "'DDRD' was not declared in this scope",
-          "datepublished": "2021-10-30T05:52:10Z",
-          "mainentityofpage": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969"
-        },
-        {
-          "articlebody": "Hi, I am currently using ATmega328P built into an Arduino UNO",
-          "datemodified": "2021-10-30T11:39:23Z",
-          "position": "#6",
-          "headline": "'DDRD' was not declared in this scope",
-          "datepublished": "2021-10-30T11:39:23Z",
-          "mainentityofpage": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969"
-        },
-        {
-          "articlebody": "Hi, sorry I still new to this Adruino Coding stuff. How do I change the settings to make it work for an ATmega328P on an Arduino UNO board?",
-          "datemodified": "2021-10-30T11:40:41Z",
-          "position": "#7",
-          "headline": "'DDRD' was not declared in this scope",
-          "datepublished": "2021-10-30T11:40:41Z",
-          "mainentityofpage": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969"
-        },
-        {
-          "image": "https://europe1.discourse-cdn.com/arduino/original/4X/f/9/3/f93bf73a0e0a13cc6234510d888ad2c44692f054.png",
-          "articlebody": "thecrazyballoon: How do I change the settings to make it work for an ATmega328P on an Arduino UNO board? In the IDE: image986×571 27 KB",
-          "datemodified": "2021-10-30T12:04:00Z",
-          "position": "#8",
-          "headline": "'DDRD' was not declared in this scope",
-          "datepublished": "2021-10-30T12:04:00Z",
-          "mainentityofpage": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969"
-        },
-        {
-          "articlebody": "YOOOOO. THIS WAS IT!!! OMG!!! THANK YOU THANK YOU THANK YOU!!!!! My grades were on the line. You have no idea how much of a life saver you are <3. Thank you so much :DDDDDDD",
-          "datemodified": "2021-10-30T13:26:35Z",
-          "position": "#9",
-          "headline": "'DDRD' was not declared in this scope",
-          "datepublished": "2021-10-30T13:26:35Z",
-          "mainentityofpage": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969"
-        },
-        {
-          "articlebody": "This topic was automatically closed 180 days after the last reply. New replies are no longer allowed.",
-          "datemodified": "2022-04-28T13:27:30Z",
-          "position": "#10",
-          "headline": "'DDRD' was not declared in this scope",
-          "datepublished": "2022-04-28T13:27:30Z",
-          "mainentityofpage": "https://forum.arduino.cc/t/ddrd-was-not-declared-in-this-scope/919969"
-        }
-      ],
-      "cse_image": [
-        {
-          "src": "https://europe1.discourse-cdn.com/arduino/original/3X/1/f/1f6eb1c9b79d9518d1688c15fe9a4b7cdd5636ae.svg"
-        }
-      ],
-      "sitenavigationelement": [
-        {
-          "name": "Home",
-          "url": "Home"
-        },
-        {
-          "name": "Categories",
-          "url": "Categories"
-        },
-        {
-          "name": "FAQ/Guidelines",
-          "url": "FAQ/Guidelines"
-        },
-        {
-          "name": "Terms of Service",
-          "url": "Terms of Service"
-        },
-        {
-          "name": "Privacy Policy",
-          "url": "Privacy Policy"
-        }
-      ],
-      "listitem": [
-        {
-          "item": "Using Arduino",
-          "name": "Using Arduino",
-          "position": "1"
-        },
-        {
-          "item": "Microcontrollers",
-          "name": "Microcontrollers",
-          "position": "2"
-        },
-        {
-          "position": "1"
-        }
-      ]
-    }
-  },
-  {
-    "kind": "customsearch#result",
     "title": "86724 – Compilation error with new isl 0.20 (missing includes)",
     "htmlTitle": "86724 – Compilation <b>error</b> with new isl 0.20 (missing includes)",
     "link": "https://gcc.gnu.org/bugzilla/show_bug.cgi?id=86724",
@@ -1237,6 +799,62 @@
         },
         {
           "fn": "Andrew Pinski"
+        }
+      ]
+    }
+  },
+  {
+    "kind": "customsearch#result",
+    "title": "error: 'exit' was not declared in this scope",
+    "htmlTitle": "<b>error</b>: &#39;exit&#39; was <b>not declared in this scope</b>",
+    "link": "https://hallertau.cs.gsu.edu/exit.txt",
+    "displayLink": "hallertau.cs.gsu.edu",
+    "snippet": "I got the following error recently, when I tried to re-compile a program that I've been using for years. error: 'exit' was not declared in this scope So I ...",
+    "htmlSnippet": "I got the following <b>error</b> recently, when I tried to re-compile a program that I&#39;ve been using for years. <b>error</b>: &#39;exit&#39; was <b>not declared in this scope</b> So I&nbsp;...",
+    "cacheId": "g5s69yBavCQJ",
+    "formattedUrl": "https://hallertau.cs.gsu.edu/exit.txt",
+    "htmlFormattedUrl": "https://hallertau.cs.gsu.edu/exit.txt",
+    "mime": "text/plain",
+    "fileFormat": "text/plain"
+  },
+  {
+    "kind": "customsearch#result",
+    "title": "Eclipse Community Forums: C / C++ IDE (CDT) » INT_MAX was not ...",
+    "htmlTitle": "Eclipse Community Forums: <b>C</b> / <b>C++</b> IDE (CDT) » INT_MAX was <b>not</b> ...",
+    "link": "https://www.eclipse.org/forums/index.php/t/1085146/",
+    "displayLink": "www.eclipse.org",
+    "snippet": "Home » Language IDEs » C / C++ IDE (CDT) » INT_MAX was not declared in this scope/could not be resolved(Problem with INT_MAX in tutorial ...",
+    "htmlSnippet": "Home » Language IDEs » <b>C</b> / <b>C++</b> IDE (CDT) » INT_MAX was <b>not declared in this scope</b>/could not be resolved(Problem with INT_MAX in tutorial&nbsp;...",
+    "cacheId": "bHXdxryNSu0J",
+    "formattedUrl": "https://www.eclipse.org/forums/index.php/t/1085146/",
+    "htmlFormattedUrl": "https://www.eclipse.org/forums/index.php/t/1085146/",
+    "pagemap": {
+      "cse_thumbnail": [
+        {
+          "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSUqoZBnAtt6KVuSyYeFqxL3iTyidFtuZ3qHZvPm4hTd-PgZWfOl1O_OIc",
+          "width": "200",
+          "height": "200"
+        }
+      ],
+      "metatags": [
+        {
+          "og:image": "https://www.eclipse.org/eclipse.org-common/themes/solstice/public/images/logo/eclipse-foundation-200x200.png",
+          "og:image:width": "200",
+          "twitter:card": "summary",
+          "twitter:title": "Eclipse Community Forums: C / C++ IDE (CDT) » INT_MAX was not declared in this scope/could not be resolved | The Eclipse Foundation",
+          "twitter:site": "@EclipseFdn",
+          "viewport": "width=device-width, initial-scale=1",
+          "twitter:url": "https://www.eclipse.org/eclipse.org-common/themes/solstice/html_template/index.php?theme=default&layout=default-fluid",
+          "twitter:description": "The Eclipse Foundation - home to a global community, the Eclipse IDE, Jakarta EE and over 350 open source projects, including runtimes, tools and frameworks.",
+          "og:title": "Eclipse Community Forums: C / C++ IDE (CDT) » INT_MAX was not declared in this scope/could not be resolved | The Eclipse Foundation",
+          "og:image:height": "200",
+          "og:description": "The Eclipse Foundation - home to a global community, the Eclipse IDE, Jakarta EE and over 350 open source projects, including runtimes, tools and frameworks.",
+          "twitter:image": "https://www.eclipse.org/eclipse.org-common/themes/solstice/public/images/logo/eclipse-foundation-400x400.png"
+        }
+      ],
+      "cse_image": [
+        {
+          "src": "https://www.eclipse.org/eclipse.org-common/themes/solstice/public/images/logo/eclipse-foundation-200x200.png"
         }
       ]
     }

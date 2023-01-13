@@ -1,1 +1,1 @@
-In Cpp error: 'lkdfkdj' was not declared in this scope
+c++error: 'a' was not declared in this scope
