@@ -8,6 +8,7 @@ const fs = require("fs");
 const fetch = require("node-fetch");
 const cheerio = require("cheerio");
 const https = require("https");
+let url;
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 
@@ -58,16 +59,97 @@ function activate(context) {
           default:
             break;
         }
-        exec(command, (error, stdout, stderr) => {
+
+
+        if (editor) {
+          let document = editor.document;
+          filename = path.basename(document.fileName);
+          // console.log(filename);
+          const documentContent = document.getText();
+          // console.log(documentContent);
+          for (var i = filename.length; i > 0; i--) {
+            if (filename[i] === ".") {
+              filename = filename.slice(i + 1, filename.length);
+              break;
+            }
+          }
+          vscode.window.showInformationMessage(filename);
+  
+          if (filename === "cpp") {
+            let reg = /#include\s*[<"]([^>"]+)[>"]/g;
+            let match;
+            while ((match = reg.exec(documentContent)) !== null) {
+              console.log(match[1]);
+            }
+          } else if (filename == "py") {
+            let reg = /(?:import|from)\s([\w.]+)/g;
+            let match;
+            while ((match = reg.exec(documentContent)) !== null) {
+              console.log(match[1]);
+            }
+          } else if (filename == "java") {
+            let reg = /(?:import)\s([\w.]+)/g;
+            let match;
+            while ((match = reg.exec(documentContent)) !== null) {
+              console.log(match[1]);
+            }
+          }
+        }
+
+        exec(command, async (error, stdout, stderr) => {
           if (stderr) {
             let ind = stderr.search(/(e|E)rror/);
 
             let str = stderr.substring(ind, stderr.length - 1);
             const array = str.split("\n");
-            handle(temp, array[0]);
-			
-
+            try {
+              const linkStr = await handle(temp, array[0]);
+              for (let element of linkStr) {
+                if (element.title.includes("Stack Overflow")) {
+                  url= element.link;
+                  console.log(url);
+                  break;
+                }
+              }
+            } catch (err) {
+              console.log(err);
+            }
           }
+          
+          let panel = vscode.window.createWebviewPanel(
+            "browser", // Identifies the type of the webview. Used internally
+            "Browser", // Title of the panel displayed to the user
+            vscode.ViewColumn.One, // Editor column to show the new webview panel in.
+            {
+              enableScripts: true,
+            }
+          );
+          // Use XMLHttpRequest to fetch the HTML content of the website
+          var XMLHttpRequest = require("xhr2");
+          let xhr = new XMLHttpRequest();
+          xhr.open("GET",url
+          , true);
+          xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              // Update the webview's HTML content
+              panel.webview.html = xhr.responseText;
+            }
+          };
+          xhr.send();
+
+          // Handle navigation events
+          panel.webview.onDidReceiveMessage(
+            (message) => {
+              switch (message.command) {
+                case "navigate":
+                  xhr.open("GET", message.url, true);
+                  xhr.send();
+                  break;
+              }
+            },
+            null,
+            context.subscriptions
+          );
         });
         // Display a message box to the user
         vscode.window.showInformationMessage("Hello World from Cody!");
@@ -81,28 +163,21 @@ function activate(context) {
 // This method is called when your extension is deactivated
 function deactivate() {}
 
-function handle(a, b) {
-  const httpsAgent = new https.Agent({ keepAlive: true });
-  const search = a + b;
-  //@ts-ignore
-  axios.get(
-      `https://www.googleapis.com/customsearch/v1?key=AIzaSyCw4zRgo8f0ZL1902rHQ4plGf3nSd4XgN8&cx=2105e3b7edca745ba&q=${search}`)
-    .then((res) => {
-	  let arr=res.data.items;
-	  for (let i=0;i<arr.length;i++){
-		if(arr[i].title.includes("Stack Overflow")){
-			webScraping(arr[i].link);
-			return;
-		}
-	  }
-    })
-    .catch((err) => console.error(err));
+async function handle(a, b) {
+  try {
+    const httpsAgent = new https.Agent({ keepAlive: true });
+    const search = a + b;
+    //@ts-ignore
+    let resp = await axios.get(
+      `https://www.googleapis.com/customsearch/v1?key=AIzaSyAn4qY8OoecoGqIJLzgtlnWSYhOdjTQLKw&cx=2105e3b7edca745ba&q=${search}`
+    );
+
+    return resp.data.items;
+  } catch (err) {
+    return err;
+  }
 }
 
-
-function webScraping(str){
-	console.log(str);
-}
 
 module.exports = {
   activate,

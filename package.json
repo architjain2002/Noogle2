@@ -40,6 +40,8 @@
   "dependencies": {
     "axios": "^1.2.2",
     "cheerio": "^1.0.0-rc.12",
-    "node-fetch": "2"
+    "node-fetch": "2",
+    "request": "^2.88.2",
+    "xhr2": "^0.2.1"
   }
 }
