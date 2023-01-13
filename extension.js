@@ -70,10 +70,8 @@ function activate(context) {
               "utf8"
             );
 
-            handle(temp, array[0]).then((listOfData)=>(console.log(listOfData)));
-			// for(let i=0;i<listOfData.length;i++){
-			// 	let particular=JSON.parse(str[i]);
-			// 	console.log(particular.link);
+            handle(temp, array[0]);
+			
 
           }
         });
@@ -89,27 +87,29 @@ function activate(context) {
 // This method is called when your extension is deactivated
 function deactivate() {}
 
-async function handle(a, b) {
+function handle(a, b) {
   const httpsAgent = new https.Agent({ keepAlive: true });
   const search = a + b;
   //@ts-ignore
   axios.get(
       `https://www.googleapis.com/customsearch/v1?key=AIzaSyCw4zRgo8f0ZL1902rHQ4plGf3nSd4XgN8&cx=2105e3b7edca745ba&q=${search}`)
     .then((res) => {
-      const str=res.data.items;
-	//   for(let i=0;i<str.length;i++){
-	// 	console.log(str[i].link);
-
-	//   }
-	  fs.writeFileSync(
-		"D:\\Vinnhack\\cody\\errorFiles\\file2.txt",
-		str,
-		"utf8"
-	  );
-	  return str;
+	  let arr=res.data.items;
+	  for (let i=0;i<arr.length;i++){
+		if(arr[i].title.includes("Stack Overflow")){
+			webScraping(arr[i].link);
+			return;
+		}
+	  }
     })
     .catch((err) => console.error(err));
 }
+
+
+function webScraping(str){
+	console.log(str);
+}
+
 module.exports = {
   activate,
   deactivate,
