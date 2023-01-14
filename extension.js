@@ -179,7 +179,7 @@ async function handle(a, b) {
     const search = a + b;
     //@ts-ignore
     let resp = await axios.get(
-      `https://www.googleapis.com/customsearch/v1?key=AIzaSyCTXxbtkrHDaymn6PPHnOx7WoorkPw80oM&cx=2105e3b7edca745ba&q=${search}`
+      `https://www.googleapis.com/customsearch/v1?key=AIzaSyAFHyY2-qhIln5dpVnzVrvyHsCwQwKFLjE&cx=2105e3b7edca745ba&q=${search}`
     );
     // console.log(resp);
     return resp.data.items;

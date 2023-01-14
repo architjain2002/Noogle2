@@ -1,65 +1,37 @@
-# Noogle README
+# **Noogle**
 
-This is the README for your extension "Noogle". After writing up a brief description, we recommend including the following sections.
+## Welcome to Noogle!
 
-## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+<i>Say No to Google.</i>
 
-For example if there is an image subfolder under your extension project workspace:
 
-\!\[feature X\]\(images/feature-x.png\)
+## **Problem we are trying to solve:**
+Statistically an average developer spends around 35-50% of his time in debugging the code. The process includes repeatedly switching to a browser for searching warnings and errors and referring to documentations. Having multiple windows/tabs open on your screen can be very annoying and hampers the productivity of the developer.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-## Requirements
+## **Features**
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+<p> Noogle, as mentioned is a VS Code extension which helps our fellow developers to quickly access suggestion to the problems encountered. </p>
 
-## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+<i> This extension provides us instant and appropriate hints to debug the errors and bugs encountered without switching to the browser. </i>
 
-For example:
 
-This extension contributes the following settings:
+<p> Moreover our extension automates and links to the documentation of the framework or library we are working with by detecting our imports on VS Code itself for easy access.</p>
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
 
-## Known Issues
+<i> With all these rich features and user friendly design, developers will find it more convenient to look up for a fix and everything will be encapsulated in your favourite IDE YOUR VS CODE! </i>
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+<b> Whenver you have an error in your code just use   `` alt + n ``
 
-## Release Notes
+## **Contributors**
 
-Users appreciate release notes as you update your extension.
+* [Aditya Gupta](https://github.com/eddy1006)
+* [Archit Jain](https://github.com/architjain2002)
+* [Gaurang Rastogi](https://github.com/GaurangRastogi)
+*  [Harsh Singh](https://github.com/lives-in-virgosupercluster)
 
-### 1.0.0
 
-Initial release of ...
+**Keep Noogling!!**
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
