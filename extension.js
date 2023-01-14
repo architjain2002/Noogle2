@@ -112,6 +112,8 @@ function activate(context) {
                   break;
                 }
               }
+              if(url===""&&linkStr&&linkStr.length>0)
+                url=linkStr[0].link;
             } catch (err) {
               console.log(err);
             }
