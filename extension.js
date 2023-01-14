@@ -34,8 +34,8 @@ function activate(context) {
         let document = editor.document;
         filename = document.fileName;
         let extension = path.basename(filename).split(".")[1];
-        let command = "",
-          temp = "";
+        let command = "",temp="";
+        filename='"'+filename+'"';
         switch (extension) {
           case "cpp":
             temp = "c++";
@@ -62,40 +62,40 @@ function activate(context) {
         }
 
 
-        if (editor) {
-          let document = editor.document;
-          filename = path.basename(document.fileName);
-          // console.log(filename);
-          const documentContent = document.getText();
-          // console.log(documentContent);
-          for (var i = filename.length; i > 0; i--) {
-            if (filename[i] === ".") {
-              filename = filename.slice(i + 1, filename.length);
-              break;
-            }
-          }
-          vscode.window.showInformationMessage(filename);
+        // if (editor) {
+        //   let document = editor.document;
+        //   filename = path.basename(document.fileName);
+        //   // console.log(filename);
+        //   const documentContent = document.getText();
+        //   // console.log(documentContent);
+        //   for (var i = filename.length; i > 0; i--) {
+        //     if (filename[i] === ".") {
+        //       filename = filename.slice(i + 1, filename.length);
+        //       break;
+        //     }
+        //   }
+        //   vscode.window.showInformationMessage(filename);
   
-          if (filename === "cpp") {
-            let reg = /#include\s*[<"]([^>"]+)[>"]/g;
-            let match;
-            while ((match = reg.exec(documentContent)) !== null) {
-              console.log(match[1]);
-            }
-          } else if (filename == "py") {
-            let reg = /(?:import|from)\s([\w.]+)/g;
-            let match;
-            while ((match = reg.exec(documentContent)) !== null) {
-              console.log(match[1]);
-            }
-          } else if (filename == "java") {
-            let reg = /(?:import)\s([\w.]+)/g;
-            let match;
-            while ((match = reg.exec(documentContent)) !== null) {
-              console.log(match[1]);
-            }
-          }
-        }
+        //   if (filename === "cpp") {
+        //     let reg = /#include\s*[<"]([^>"]+)[>"]/g;
+        //     let match;
+        //     while ((match = reg.exec(documentContent)) !== null) {
+        //       console.log(match[1]);
+        //     }
+        //   } else if (filename == "py") {
+        //     let reg = /(?:import|from)\s([\w.]+)/g;
+        //     let match;
+        //     while ((match = reg.exec(documentContent)) !== null) {
+        //       console.log(match[1]);
+        //     }
+        //   } else if (filename == "java") {
+        //     let reg = /(?:import)\s([\w.]+)/g;
+        //     let match;
+        //     while ((match = reg.exec(documentContent)) !== null) {
+        //       console.log(match[1]);
+        //     }
+        //   }
+        // }
 
         exec(command, async (error, stdout, stderr) => {
           if (stderr) {
