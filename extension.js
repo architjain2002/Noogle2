@@ -8,6 +8,7 @@ const fs = require("fs");
 const fetch = require("node-fetch");
 const cheerio = require("cheerio");
 const https = require("https");
+const { Console } = require("console");
 let url;
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -118,21 +119,26 @@ function activate(context) {
           
           let panel = vscode.window.createWebviewPanel(
             "browser", // Identifies the type of the webview. Used internally
-            "Browser", // Title of the panel displayed to the user
+            "Stack-Solution", // Title of the panel displayed to the user
             vscode.ViewColumn.One, // Editor column to show the new webview panel in.
             {
               enableScripts: true,
             }
           );
           // Use XMLHttpRequest to fetch the HTML content of the website
+          panel.webview.html = `<html><body>Loading...</body></html>`;
           var XMLHttpRequest = require("xhr2");
           let xhr = new XMLHttpRequest();
           xhr.open("GET",url
           , true);
           xhr.onreadystatechange = () => {
             if (xhr.readyState === 4 && xhr.status === 200) {
-              // Update the webview's HTML content
-              panel.webview.html = xhr.responseText;
+              let str=xhr.responseText;
+              let ind=str.lastIndexOf("</script>");
+              let newVal=str.substring(0,ind);
+              newVal+="</script></body></html>";
+              panel.webview.html=newVal;
+              
             }
           };
           xhr.send();
@@ -171,7 +177,7 @@ async function handle(a, b) {
     let resp = await axios.get(
       `https://www.googleapis.com/customsearch/v1?key=AIzaSyAn4qY8OoecoGqIJLzgtlnWSYhOdjTQLKw&cx=2105e3b7edca745ba&q=${search}`
     );
-
+    // console.log(resp);
     return resp.data.items;
   } catch (err) {
     return err;
