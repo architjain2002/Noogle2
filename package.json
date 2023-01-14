@@ -1,9 +1,10 @@
 {
-  "name": "cody",
+  "name": "noogle",
   "displayName": "Noogle",
   "publisher": "SigmaCoders",
   "description": "",
-  "version": "0.0.1",
+  "icon":"letter-n.png",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -18,7 +19,7 @@
     "commands": [
       {
         "command": "cody.helloWorld",
-        "title": "Hello World"
+        "title": "Noogle"
       }
     ],
     "keybindings": [
