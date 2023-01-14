@@ -34,8 +34,9 @@ function activate(context) {
         let document = editor.document;
         filename = document.fileName;
         let extension = path.basename(filename).split(".")[1];
-        let command = "",temp="";
-        filename='"'+filename+'"';
+        let command = "",
+          temp = "";
+        filename = '"' + filename + '"';
         switch (extension) {
           case "cpp":
             temp = "c++";
@@ -61,7 +62,6 @@ function activate(context) {
             break;
         }
 
-
         // if (editor) {
         //   let document = editor.document;
         //   filename = path.basename(document.fileName);
@@ -75,7 +75,7 @@ function activate(context) {
         //     }
         //   }
         //   vscode.window.showInformationMessage(filename);
-  
+
         //   if (filename === "cpp") {
         //     let reg = /#include\s*[<"]([^>"]+)[>"]/g;
         //     let match;
@@ -98,7 +98,7 @@ function activate(context) {
         // }
 
         exec(command, async (error, stdout, stderr) => {
-          let url="";
+          let url = "";
           if (stderr) {
             let ind = stderr.search(/(e|E)rror/);
 
@@ -108,60 +108,61 @@ function activate(context) {
               const linkStr = await handle(temp, array[0]);
               for (let element of linkStr) {
                 if (element.title.includes("Stack Overflow")) {
-                  url= element.link;
+                  url = element.link;
                   break;
                 }
               }
-              if(url===""&&linkStr&&linkStr.length>0)
-                url=linkStr[0].link;
+              if (url === "" && linkStr && linkStr.length > 0)
+                url = linkStr[0].link;
             } catch (err) {
               console.log(err);
             }
           }
-          if(url!==""){
-          let panel = vscode.window.createWebviewPanel(
-            "browser", // Identifies the type of the webview. Used internally
-            "Stack-Solution", // Title of the panel displayed to the user
-            vscode.ViewColumn.One, // Editor column to show the new webview panel in.
-            {
-              enableScripts: true,
-            }
-          );
-          // Use XMLHttpRequest to fetch the HTML content of the website
-          panel.webview.html = `<html><body>Loading...</body></html>`;
-          var XMLHttpRequest = require("xhr2");
-          let xhr = new XMLHttpRequest();
-          xhr.open("GET",url
-          , true);
-          xhr.onreadystatechange = () => {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              let str=xhr.responseText;
-              let ind=str.lastIndexOf("</script>");
-              let newVal=str.substring(0,ind);
-              newVal+="</script></body></html>";
-              panel.webview.html=newVal;
-              
-            }
-          };
-          xhr.send();
-
-          // Handle navigation events
-          panel.webview.onDidReceiveMessage(
-            (message) => {
-              switch (message.command) {
-                case "navigate":
-                  xhr.open("GET", message.url, true);
-                  xhr.send();
-                  break;
+          if (url !== "") {
+            let panel = vscode.window.createWebviewPanel(
+              "browser", // Identifies the type of the webview. Used internally
+              "Noogle's Solution", // Title of the panel displayed to the user
+              vscode.ViewColumn.Two, // Editor column to show the new webview panel in.
+              {
+                enableScripts: true,
+                retainContextWhenHidden: true,
               }
-            },
-            null,
-            context.subscriptions
-          );
+            );
+            // Use XMLHttpRequest to fetch the HTML content of the website
+            panel.webview.html = `<html><body>Loading...</body></html>`;
+            var XMLHttpRequest = require("xhr2");
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.onreadystatechange = () => {
+              if (xhr.readyState === 4 && xhr.status === 200) {
+                let str = xhr.responseText;
+                let ind = str.lastIndexOf("</script>");
+                let newVal = str.substring(0, ind);
+                newVal += "</script></body></html>";
+                panel.webview.html = newVal;
+              }
+            };
+            xhr.send();
+
+            // Handle navigation events
+            panel.webview.onDidReceiveMessage(
+              (message) => {
+                switch (message.command) {
+                  case "navigate":
+                    xhr.open("GET", message.url, true);
+                    xhr.send();
+                    break;
+                }
+              },
+              null,
+              context.subscriptions
+            );
+          } else {
+            vscode.window.showInformationMessage(
+              "Noogle says you have no errors"
+            );
           }
         });
-        // Display a message box to the user
-        vscode.window.showInformationMessage("Hello World from Cody!");
       }
     }
   );
@@ -186,7 +187,6 @@ async function handle(a, b) {
     return err;
   }
 }
-
 
 module.exports = {
   activate,

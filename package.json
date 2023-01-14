@@ -19,6 +19,13 @@
         "command": "cody.helloWorld",
         "title": "Hello World"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "cody.helloWorld",
+        "key": "alt+n",
+        "mac": "cmd+shift+alt+o"
+      }
     ]
   },
   "scripts": {
