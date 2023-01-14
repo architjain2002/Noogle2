@@ -9,7 +9,7 @@ const fetch = require("node-fetch");
 const cheerio = require("cheerio");
 const https = require("https");
 const { Console } = require("console");
-let url;
+
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 
@@ -98,6 +98,7 @@ function activate(context) {
         // }
 
         exec(command, async (error, stdout, stderr) => {
+          let url="";
           if (stderr) {
             let ind = stderr.search(/(e|E)rror/);
 
@@ -108,7 +109,6 @@ function activate(context) {
               for (let element of linkStr) {
                 if (element.title.includes("Stack Overflow")) {
                   url= element.link;
-                  console.log(url);
                   break;
                 }
               }
@@ -116,7 +116,7 @@ function activate(context) {
               console.log(err);
             }
           }
-          
+          if(url!==""){
           let panel = vscode.window.createWebviewPanel(
             "browser", // Identifies the type of the webview. Used internally
             "Stack-Solution", // Title of the panel displayed to the user
@@ -156,6 +156,7 @@ function activate(context) {
             null,
             context.subscriptions
           );
+          }
         });
         // Display a message box to the user
         vscode.window.showInformationMessage("Hello World from Cody!");
@@ -175,7 +176,7 @@ async function handle(a, b) {
     const search = a + b;
     //@ts-ignore
     let resp = await axios.get(
-      `https://www.googleapis.com/customsearch/v1?key=AIzaSyAn4qY8OoecoGqIJLzgtlnWSYhOdjTQLKw&cx=2105e3b7edca745ba&q=${search}`
+      `https://www.googleapis.com/customsearch/v1?key=AIzaSyCTXxbtkrHDaymn6PPHnOx7WoorkPw80oM&cx=2105e3b7edca745ba&q=${search}`
     );
     // console.log(resp);
     return resp.data.items;
